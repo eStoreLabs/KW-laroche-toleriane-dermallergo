@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Roche-Posay</title>
+  <style>
+    /* Locator Web Light */
+    @font-face {
+      font-family: "LocatorWeb";
+      font-weight: 200;
+      src: url("assets/fonts/LocatorWebLight/LocatorWebLight.eot");
+      src: url("assets/fonts/LocatorWebLight/LocatorWebLight.eot?#iefix") format("embedded-opentype"), url("assets/fonts/LocatorWebLight/LocatorWebLight.woff2") format("woff2"), url("assets/fonts/LocatorWebLight/LocatorWebLight.woff") format("woff");
+      font-style: normal;
+    }
+
+    /* Locator Web Medium */
+    @font-face {
+      font-family: "LocatorWeb";
+      font-weight: 400;
+      src: url("assets/fonts/LocatorWebMedium/LocatorWebMedium.eot");
+      src: url("assetsfonts/LocatorWebMedium/LocatorWebMedium.eot?#iefix") format("embedded-opentype"), url("assets/fonts/LocatorWebMedium/LocatorWebMedium.woff2") format("woff2"), url("assets/fonts/LocatorWebMedium/LocatorWebMedium.woff") format("woff");
+      font-style: normal;
+    }
+
+    #es-effaclar.es-effaclar {
+      font-family: "LocatorWeb", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 1.2;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0;
+      overflow: hidden;
+      color: #000;
+      background: #fff;
+    }
+
+    #es-effaclar.es-effaclar html,
+    #es-effaclar.es-effaclar body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #es-effaclar.es-effaclar sup {
+      font-size: 0.6em;
+      vertical-align: top;
+    }
+
+    #es-effaclar.es-effaclar h2,
+    #es-effaclar.es-effaclar h3,
+    #es-effaclar.es-effaclar h4,
+    #es-effaclar.es-effaclar h5 {
+      color: #000;
+      font-family: "LocatorWeb", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #es-effaclar.es-effaclar * {
+      box-sizing: border-box;
+    }
+
+    #es-effaclar.es-effaclar .es-kv {
+      margin-bottom: 32px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__header {
+      display: flex;
+      align-items: flex-start;
+      padding: 0 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__logo {
+      margin-right: 16px;
+      flex: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img-packshot {
+      transition: transform 0.3s ease;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--logo {
+      margin-left: 0;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--desktop {
+      display: none;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--badge {
+      padding: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__img--stamp {
+      margin-right: 0;
+      margin-left: 0;
+      width: 60px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__cap {
+      padding: 16px 0;
+      font-weight: 200;
+      font-size: 16px;
+      flex: 2;
+      margin: 0;
+      color: inherit;
+      line-height: inherit;
+      text-align: right;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__packshot {
+      position: relative;
+      z-index: 3;
+      padding: 16px 0;
+      opacity: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__packshot:hover .es-kv__img-packshot {
+      transform: scale(1.1);
+    }
+
+    #es-effaclar.es-effaclar .es-kv__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      flex-flow: column;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp {
+      display: flex;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__title {
+      padding: 16px;
+      font-weight: 200;
+      font-size: 28px;
+      margin: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__title span {
+      color: #009de5;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 16px;
+      min-width: 265px;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__subtitle {
+      padding-left: 16px;
+      color: #009ee3;
+      font-weight: 400;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp-text {
+      padding-left: 16px;
+      font-weight: 200;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-kv__stamp-text span {
+      font-weight: 400;
+    }
+
+    #es-effaclar.es-effaclar .es-serum {
+      margin-bottom: 32px;
+      padding: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__title {
+      margin-bottom: 8px;
+      font-weight: 200;
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__subtitle {
+      font-weight: 200;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__container {
+      margin: 0 auto;
+      margin-top: 42px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__feature {
+      margin-bottom: 20px;
+      width: 150px;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__feature:hover .es-serum__icon {
+      transform: scale(1.1);
+    }
+
+    #es-effaclar.es-effaclar .es-serum__icon {
+      flex: 1;
+      transition: transform 0.3s ease;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__text {
+      margin: 16px 0;
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 11px;
+      flex: 2;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-serum__disclaimer {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-benefits {
+      margin-bottom: 40px;
+      padding: 40px 20px;
+      background: #eeeeef;
+    }
+
+    #es-effaclar.es-effaclar .es-benefits__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #es-effaclar.es-effaclar .es-benefits__single {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #es-effaclar.es-effaclar .es-benefits__single:last-of-type {
+      margin-bottom: 0;
+    }
+
+    #es-effaclar.es-effaclar .es-benefits__text {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-res {
+      margin-bottom: 40px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__wrapper {
+      padding: 32px 16px;
+      background: #1b8dc9;
+    }
+
+    #es-effaclar.es-effaclar .es-res__title {
+      margin: 0 auto;
+      margin-bottom: 24px;
+      color: #fff;
+      font-weight: 200;
+      font-size: 27px;
+      padding: 0;
+      line-height: inherit;
+      max-width: 400px;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-res__container {
+      margin: 0 auto;
+      margin-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 400px;
+      gap: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__single {
+      width: 45%;
+    }
+
+    #es-effaclar.es-effaclar .es-res__percent {
+      color: #fff;
+      font-weight: 400;
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      line-height: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-res__percent sup {
+      font-size: 34px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__percent small {
+      font-size: 11px;
+    }
+
+    #es-effaclar.es-effaclar .es-res__text {
+      color: #fff;
+      font-weight: 400;
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-res__disc {
+      padding: 16px;
+      font-size: 10px;
+      margin: 0;
+      color: inherit;
+      line-height: inherit;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-res__disclaimer {
+      padding: 24px 16px 0 16px;
+      font-size: 12px;
+      margin: 0;
+      color: inherit;
+      line-height: inherit;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding: 0 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__title {
+      margin-bottom: 32px;
+      font-weight: bold;
+      font-size: 28px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container .es-ingredients__single {
+      opacity: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container:hover .es-ingredients__single {
+      opacity: 0.5;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container .es-ingredients__single:hover {
+      opacity: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px 5px;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__single {
+      flex: 1;
+      flex-basis: 100%;
+      max-width: 155px;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__image {
+      position: relative;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__label {
+      position: absolute;
+      top: 24px;
+      left: 0;
+      width: 95%;
+      padding: 10px 4px 7px 4px;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.66);
+      text-align: left;
+      text-transform: uppercase;
+      min-height: 60px;
+      line-height: 1;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__label span {
+      position: relative;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: -1px;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    #es-effaclar.es-effaclar .es-ingredients__text {
+      padding-top: 16px;
+      font-size: 14px;
+    }
+
+    #es-effaclar.es-effaclar .es-use {
+      margin-bottom: 56px;
+    }
+
+    #es-effaclar.es-effaclar .es-use__wrapper {
+      padding: 24px 16px;
+      background: #a4daff;
+    }
+
+    #es-effaclar.es-effaclar .es-use__title {
+      margin-bottom: 24px;
+      color: #000;
+      font-weight: 200;
+      font-size: 27px;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-use__item {
+      margin-bottom: 16px;
+      color: #000;
+      font-weight: 400;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+    }
+
+    #es-effaclar.es-effaclar .es-use__text {
+      margin-bottom: 16px;
+      color: #000;
+      font-weight: 200;
+      font-size: 15px;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__title {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 16px;
+      font-weight: 200;
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__img {
+      display: none;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__container {
+      padding: 16px;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__single {
+      margin-bottom: 64px;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__number {
+      color: #009ee3;
+      font-weight: 400;
+      font-size: 156px;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      line-height: 0.75;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__subtitle {
+      margin: 12px 0;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__subtitle strong {
+      display: block;
+      font-size: 24px;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__text {
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__link {
+      border: 1px solid #009ee3;
+      padding: 4px 16px;
+      color: #fff;
+      font-size: 15px;
+      text-decoration: none;
+      background: #009ee3;
+      transition: all 0.3s ease;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__link:hover {
+      color: #009ee3;
+      background: #fff;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__packshot {
+      padding-bottom: 30px;
+      padding-left: 100px;
+    }
+
+    #es-effaclar.es-effaclar .es-routine__img-packshot {
+      margin: 0 auto;
+      margin-bottom: -140px;
+      display: block;
+      max-width: 100%;
+      max-height: 400px;
+    }
+
+    #es-effaclar.es-effaclar .es-terms__title {
+      margin: 0;
+      margin-bottom: 40px;
+      padding: 0;
+      color: inherit;
+      font-weight: 200;
+      font-size: 26px;
+      line-height: inherit;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    #es-effaclar.es-effaclar .es-terms__title strong {
+      white-space: nowrap;
+    }
+
+    #es-effaclar.es-effaclar .es-terms__container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #es-effaclar.es-effaclar .es-terms__term {
+      position: relative;
+      max-width: 100%;
+    }
+
+    #es-effaclar.es-effaclar .es-terms__text {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    #es-effaclar.es-effaclar .es-disclaimer {
+      margin-bottom: 32px;
+    }
+
+    #es-effaclar.es-effaclar .es-disclaimer__text {
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      line-height: inherit;
+    }
+
+    @media screen and (min-width: 561px) {
+      #es-effaclar.es-effaclar .es-serum__container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      #es-effaclar.es-effaclar .es-serum__text {
+        font-size: 14px;
+      }
+
+      #es-effaclar.es-effaclar .es-terms__title {
+        font-size: 28px;
+      }
+    }
+
+    @media screen and (min-width: 731px) {
+      #es-effaclar.es-effaclar .es-kv__header {
+        margin: 0 auto;
+        margin-bottom: 32px;
+        padding: 0;
+        max-width: 607px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__container {
+        position: relative;
+        margin-bottom: 80px;
+        display: flex;
+        background-image: url(assets/img/consist.png);
+        background-position: 110% 6%;
+        background-size: 57%;
+        background-repeat: no-repeat;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__content {
+        width: 50%;
+        align-items: flex-end;
+        flex: 1;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__title {
+        padding-top: 80px;
+        padding-right: 80px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__photo {
+        position: relative;
+        left: 120px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        max-width: 500px;
+        overflow: hidden;
+        transform: translateY(40px);
+  
+      }
+
+      #es-effaclar.es-effaclar .es-kv__badge--mobile {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp {
+        padding: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__packshot {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--mobile {
+        display: none;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--desktop {
+        position: relative;
+        z-index: 0;
+        display: block;
+        max-width: 70%;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--badge {
+        margin-left: 0;
+        padding: 0;
+        padding-bottom: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__img--first {
+        order: 2;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__stamp {
+        padding-right: 60px;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__subtitle {
+        padding-right: 16px;
+        padding-left: 0;
+        text-align: right;
+      }
+
+      #es-effaclar.es-effaclar .es-res {
+        margin-bottom: 64px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__wrapper {
+        height: 381px;
+        padding-right: 80px;
+        background: url("assets/img/info.png") no-repeat;
+        background-size: cover;
+        background-position: right;
+      }
+
+      #es-effaclar.es-effaclar .es-res__title {
+        margin-bottom: 40px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__container {
+        margin-bottom: 0;
+        gap: 32px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      #es-effaclar.es-effaclar .es-res__disclaimer {
+        margin: 0 auto;
+      }
+
+      #es-effaclar.es-effaclar .es-res__content {
+        margin-left: 15%;
+      }
+
+      #es-effaclar.es-effaclar .es-benefits {
+        padding: 40px 40px 40px 80px;
+        background: url("assets/img/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+      }
+
+      #es-effaclar.es-effaclar .es-benefits__wrapper {
+        align-items: flex-start;
+        max-width: 70%;
+      }
+
+      #es-effaclar.es-effaclar .es-benefits__single {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      #es-effaclar.es-effaclar .es-benefits__text {
+        margin: 0 0 0 10px;
+        font-size: 18px;
+      }
+
+      #es-effaclar.es-effaclar .es-benefits__check {
+        margin-top: 5px;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients {
+        margin-bottom: 32px;
+        padding: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-ingredients__container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      #es-effaclar.es-effaclar .es-use__title {
+        padding: 0;
+        font-size: 32px;
+      }
+
+      #es-effaclar.es-effaclar .es-use__wrapper {
+        height: 323px;
+        display: flex;
+        align-items: center;
+        background: url("assets/img/banner.png") no-repeat center right;
+        background-size: cover;
+      }
+
+      #es-effaclar.es-effaclar .es-use__content {
+        padding-left: 32px;
+        max-width: 480px;
+      }
+
+      #es-effaclar.es-effaclar .es-use__list {
+        margin-bottom: 0;
+        padding-left: 16px;
+      }
+
+      #es-effaclar.es-effaclar .es-use__item:last-child {
+        margin-bottom: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-use__text:last-child {
+        margin-bottom: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-routine {
+        margin-bottom: 80px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__img {
+        display: block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        max-width: 110%;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single {
+        position: absolute;
+        margin-bottom: 0;
+        max-width: 25%;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--1 {
+        top: 40px;
+        right: 50px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--2 {
+        top: 24%;
+        left: 25px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--3 {
+        top: 53%;
+        right: 50px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--4 {
+        top: 70%;
+        left: 25px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__packshot {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 830px) {
+      #es-effaclar.es-effaclar .es-kv__packshot {
+        left: 54%;
+      }
+
+      #es-effaclar.es-effaclar .es-use__content {
+        padding-left: 64px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__content {
+        margin-left: 15%;
+      }
+
+      #es-effaclar.es-effaclar .es-res__title {
+        margin-bottom: 25px;
+        font-size: 34px;
+        max-width: unset;
+      }
+
+      #es-effaclar.es-effaclar .es-res__percent {
+        font-size: 50px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__percent small {
+        font-size: 14px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__text {
+        font-size: 14px;
+      }
+
+      #es-effaclar.es-effaclar .es-res__container {
+        gap: 16px 32px;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      #es-effaclar.es-effaclar .es-kv__packshot {
+        left: 50%;
+      }
+
+      #es-effaclar.es-effaclar .es-kv__photo {
+        max-width: 500px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__number {
+        font-weight: bold;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single {
+        max-width: 20%;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--1 {
+        right: 100px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--2 {
+        left: 90px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--3 {
+        top: 49%;
+        right: 100px;
+      }
+
+      #es-effaclar.es-effaclar .es-routine__single--4 {
+        top: 62%;
+        left: 90px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="es-effaclar" id="es-effaclar">
+    <section class="es-kv">
+      <div class="es-kv__header">
+        <div class="es-kv__logo">
+          <img src="assets/img/logo.png" alt="" class="es-kv__img es-kv__img--logo">
+        </div>
+      </div>
+      <div class="es-kv__container">
+        <div class="es-kv__packshot">
+          <img src="assets/img/packshot.png" alt="" class="es-kv__img es-kv__img-packshot">
+        </div>
+        <div class="es-kv__content">
+          <h2 class="es-kv__title">
+            <strong>TAASTAV NIISUTAV<br> HOOLDUS<br></strong>
+            <span>TUNDLIKULE JA<br> ALLERGILISELE NAHALE</span>
+          </h2>
+        </div>
+        <div class="es-kv__photo">
+          <img src="assets/img/kv2.png" alt="" class="es-kv__img es-kv__img--badge es-kv__img--desktop">
+          <div class="es-kv__badge es-kv__badge--mobile">
+            <img src="assets/img/badge.png" alt="" class="es-kv__img es-kv__img--badge">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="es-serum">
+      <h3 class="es-serum__title"><strong>TOLERIANE DERMALLERGO</strong> KREEM</h3>
+      <div class="es-serum__container">
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img">
+          </div>
+          <p class="es-serum__text">
+            RAHUSTAB<br> 1 MINUTIGA<sup>1</sup>
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img">
+          </div>
+          <p class="es-serum__text">
+            VÄHENDAB PUNETUST <br> 15 MINUTIGA<sup>2</sup>
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img">
+          </div>
+          <p class="es-serum__text">
+            TUGEVDAB JA<br>
+            TAASTAB NAHA<br> KAITSEBARJÄÄRI 1 H<sup>3</sup>
+          </p>
+        </div>
+
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img">
+          </div>
+          <p class="es-serum__text">
+            NIISUTUS KUNI<br>
+            48H<sup>4</sup>
+          </p>
+        </div>
+        <div class="es-serum__feature">
+          <div class="es-serum__icon">
+            <img src="assets/img/check.png" alt="" class="es-serum__img">
+          </div>
+          <p class="es-serum__text">
+            0% LÕHNA,<br>
+            0% ALKOHOLI<sup>5</sup>
+          </p>
+        </div>
+      </div>
+
+      <div class="es-serum__disclaimer">
+        <p><sup>1</sup>Põletustunne, tundliku ja allergiale kalduva naha ärritus. Enesehindamise test, 41 inimest.<br>
+          <sup>2</sup>Kliiniline hindamine 15 minutit pärast manustamist, 22 inimest.<br>
+          <sup>3</sup>Instrumentaalne test 1H pärast toote pealekandmist.<br>
+          <sup>4</sup>Instrumentaalne test.<br>
+          <sup>5</sup>Lõhnaained, etüülalkohol.
+        </p>
+      </div>
+    </section>
+
+    <div class="es-benefits">
+      <div class="es-benefits__wrapper">
+        <div class="es-benefits__single">
+          <img src="assets/img/check.png" alt="" class="es-benefits__check">
+          <p class="es-benefits__text">
+            Unikaalne valem toetab naha mikrobioomi tasakaalu ja tugevdab kaitsebarjääri, et aidata kaitsta nahka
+            väliste allergeenide ligipääsu eest. </p>
+        </div>
+
+        <div class="es-benefits__single">
+          <img src="assets/img/check.png" alt="" class="es-benefits__check">
+          <p class="es-benefits__text">
+            Nahk on kaitstud välistegurite (külm, tuul, konditsioneer, õhusaaste) ja allergeenide eest.
+          </p>
+        </div>
+
+        <div class="es-benefits__single">
+          <img src="assets/img/check.png" alt="" class="es-benefits__check">
+          <p class="es-benefits__text">
+            Tõhus retsidiivi vastu – tundlikkuse nähud vähenevad iga päevaga.
+          </p>
+        </div>
+
+        <div class="es-benefits__single">
+          <img src="assets/img/check.png" alt="" class="es-benefits__check">
+          <p class="es-benefits__text">
+            Ülihermeetiline pakend kaitseb valemit: saastumise, oksüdatsiooni, aplikaatori jääkide eest.
+          </p>
+        </div>
+
+        <div class="es-benefits__single">
+          <img src="assets/img/check.png" alt="" class="es-benefits__check">
+          <p class="es-benefits__text">
+            Testitud allergilisele nahale dermatoloogilise ja oftalmoloogilise kontrolli all.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="es-ingredients">
+      <h3 class="es-ingredients__title">AKTIIVSED KOOSTISOSAD</h3>
+      <div class="es-ingredients__container">
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-1.png" alt="" class="es-ingredients__img">
+            <p class="es-ingredients__label">
+              SFINGOBIOOM
+            </p>
+          </div>
+          <p class="es-ingredients__text">
+            Unikaalne bakteriekstrakt, mis on saadud La Roche-Posay termaalveest. Toetab naha mikrobioomi, tugevdab
+            kaitsebarjääri funktsiooni ja omab põletikuvastaseid omadusi.
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-2.png" alt="" class="es-ingredients__img">
+            <p class="es-ingredients__label">NEUROSENSIIN</p>
+          </div>
+          <p class="es-ingredients__text">
+            Rahustavate ja põletikuvastaste omadustega.
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-3.png" alt="" class="es-ingredients__img">
+            <p class="es-ingredients__label">
+              SKVALAAN
+            </p>
+          </div>
+          <p class="es-ingredients__text">
+            Tuntud epidermise liigse veekao ärahoidmise poolest.
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-4.png" alt="" class="es-ingredients__img">
+            <p class="es-ingredients__label">SHEAVÕI</p>
+          </div>
+          <p class="es-ingredients__text">
+            Tuntud naha hüdrolipiidkihti taastavate omaduste poolest.
+          </p>
+        </div>
+        <div class="es-ingredients__single">
+          <div class="es-ingredients__image">
+            <img src="assets/img/ingr-5.jpg" alt="" class="es-ingredients__img">
+            <p class="es-ingredients__label">
+              TERMAALVESI<br> <span>LA ROCHE POSAY</span>
+          </div>
+          <p class="es-ingredients__text">
+            Rahustav, leevendav ja aitab vähendada naha reaktsioonivõimet.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="es-use">
+      <div class="es-use__wrapper">
+        <div class="es-use__content">
+          <h3 class="es-use__title">
+            <strong>KUIDAS KASUTADA</strong>
+          </h3>
+          <ol class="es-use__list">
+            <li class="es-use__item">
+              <p class="es-use__text">
+                Kandke igal hommikul ja/või õhtul näole, silmaümbrusele ja kaelale.
+              </p>
+            </li>
+            <li class="es-use__item">
+              <p class="es-use__text">
+                Sobib kuivale ja väga kuivale nahale.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="es-routine">
+      <h3 class="es-routine__title"><strong>HOOLDUSRUTIIN</strong></h3>
+      <div class="es-routine__container">
+        <img src="assets/img/bg2.png" alt="" class="es-routine__img">
+        <div class="es-routine__single es-routine__single--1">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-1.png" alt="" class="es-routine__img-packshot">
+          </div>
+          <p class="es-routine__number">1</p>
+          <p class="es-routine__subtitle">
+            MITSELLAARVEDELIK
+            <strong>ultra</strong>
+          </p>
+          <p class="es-routine__text">
+            Väga tundlikule ja reaktiivsele nahale. Puhastab naha meigist ja mustusest. Lisaks niisutab see nahka ning
+            vähendab pingestunnet ja punetust.
+          </p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/naohooldus/lrp-sensitive-mitsellaarvesi-tundlikule-nahale-400ml"
+            target="_blank" class="es-routine__link">TUTVU</a>
+        </div>
+        <div class="es-routine__single es-routine__single--2">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-2.png" alt="" class="es-routine__img-packshot">
+          </div>
+          <p class="es-routine__number">2</p>
+          <p class="es-routine__subtitle">
+            <strong>toleriane<br>ultra<br>dermallergo</strong>RAHUSTAV<br> NIISUTAV<br> SEERUM
+          </p>
+          <p class="es-routine__text">
+            Päevane annus tugevdavat ja rahustavat toimet. Taastab naha mugavustunde ja toetab selle kaitsebarjääri
+            taastamist.
+          </p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/naohooldus/lrp-toleriane-dermallergo-seerum-tundlikule-nahale-20ml"
+            target="_blank" class="es-routine__link">TUTVU</a>
+        </div>
+        <div class="es-routine__single es-routine__single--3">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-3.png" alt="" class="es-routine__img-packshot">
+          </div>
+          <p class="es-routine__number">3</p>
+          <p class="es-routine__subtitle">
+            <strong>toleriane<br>dermallergo</strong>SILMADE PIIRKOND
+          </p>
+          <p class="es-routine__text">
+            See vähendab naha kuivusest tingitud punetust ja ebamugavustunnet. Taastab ja tugevdab naha kaitsebarjääri.
+          </p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/naohooldus/la-roche-posay-toleriane-dermallergo-silmaumbruskreem-20ml"
+            target="_blank" class="es-routine__link">TUTVU</a>
+        </div>
+        <div class="es-routine__single es-routine__single--4">
+          <div class="es-routine__packshot">
+            <img src="assets/img/routine-4.png" alt="" class="es-routine__img-packshot">
+          </div>
+          <p class="es-routine__number">4</p>
+          <p class="es-routine__subtitle">
+            <strong>anthelios</strong>NÄHTAMATU<br> FLUID SPF + 50
+          </p>
+          <p class="es-routine__text">
+            Lai kaitsespekter vältimaks UVA, UVB, A-infrapunakiirguse ja saaste põhjustatud kahjustusi.
+          </p>
+          <a href="https://www.benu.ee/tooted/ilu-ja-nahahooldus/paikesekaitse/la-roche-posay-anthelios-paikesekaitseemulsioon-spf50-naole-50ml"
+            target="_blank" class="es-routine__link">TUTVU</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="es-terms">
+      <h3 class="es-terms__title">
+        <strong>la roche-posay</strong> KOHUSTUSED
+      </h3>
+      <div class="es-terms__container">
+        <div class="es-terms__term es-terms__term--1">
+          <img class="es-terms__img" src="assets/img/term-1.png" alt="">
+          <p class="es-terms__text es-terms__text--white">
+            100% ALLERGIATESTITUD TOOTED
+          </p>
+        </div>
+        <div class="es-terms__term es-terms__term--2">
+          <img class="es-terms__img" src="assets/img/term-2.png" alt="">
+          <p class="es-terms__text">
+            AINULT OPTIMAALSELT KONTSENTREERITUD<br> PÕHIKOOSTISOSAD
+          </p>
+        </div>
+        <div class="es-terms__term es-terms__term--3">
+          <img class="es-terms__img" src="assets/img/term-3.png" alt="">
+          <p class="es-terms__text">
+            AJAKINDLAD VALEMID
+          </p>
+        </div>
+        <div class="es-terms__term es-terms__term--4">
+          <img class="es-terms__img" src="assets/img/term-4.png" alt="">
+          <p class="es-terms__text es-terms__text--white">
+            TESTITUD VÄGA TUNDLIKUL NAHAL
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
